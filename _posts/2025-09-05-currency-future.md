@@ -1,3 +1,11 @@
+---
+layout: post
+title: "《比特币标准》中的未来推演"
+description: "分析法币体系衰落和比特币可能成为全球硬货币标准的趋势"
+categories: [bitcoin, 读书]
+tags: [bitcoin, 货币, 法币, 未来趋势]
+---
+
 # 《比特币标准》中的未来推演
 
 根据 Saifedean Ammous 的观点，《The Bitcoin Standard: The Decentralized Alternative to Central Banking》对未来货币和社会发展的走向有以下判断：
