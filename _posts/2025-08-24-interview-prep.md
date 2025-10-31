@@ -1,3 +1,11 @@
+---
+layout: post
+title: "Interview Preparation Guide for OpenAI Software Engineer, Database Systems"
+description: "Comprehensive guide for preparing for OpenAI database systems engineering interviews"
+categories: [career, interview]
+tags: [interview, database, distributed-systems, openai]
+---
+
 # Interview Preparation Guide for OpenAI Software Engineer, Database Systems
 
 Based on your resume, which highlights extensive experience in distributed systems, vector search, database internals, query optimization, and infrastructure (e.g., Azure Cosmos DB, DiskANN rewrite in Rust, ingestion pipelines, and operating global-scale clusters), you are well-positioned for this role. Your background aligns strongly with the job's emphasis on high-performance distributed databases, vector search (like Rockset, which powers OpenAI's RAG and vector capabilities), performance bottlenecks, and scalability. However, interviews at OpenAI (similar to FAANG) will test depth in practical problem-solving, system design, coding (especially C++ for the core engine), and leadership in complex projects.

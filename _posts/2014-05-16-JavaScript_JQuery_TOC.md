@@ -2,7 +2,7 @@
 layout: post
 title: "用JQuery给文章生成目录"
 description: "description"
-categories: ["","category2"]
+categories: ["前端技术"]
 tags: ["TOC","JavaScript","JQuery"]
 published: true
 ---
