@@ -1,56 +1,56 @@
 # Haiyang Xu's Personal Blog
 
-This is a Jekyll-based blog hosted on GitHub Pages, featuring posts about computer vision, algorithms, and technology.
+A Jekyll-based technical blog powered by the [Chirpy](https://github.com/cotes2020/jekyll-theme-chirpy) theme, hosted on GitHub Pages. Features posts about computer vision, algorithms, and technology.
 
-## 🔧 Setup & Configuration
+## 🎨 Theme
 
-This site has been updated to work with modern GitHub Pages (2025):
+This site uses the **Jekyll Chirpy Theme** - a minimal, responsive, and feature-rich Jekyll theme for technical writing.
 
-### Key Updates Made:
-- ✅ Updated Jekyll configuration for modern GitHub Pages
-- ✅ Added proper `Gemfile` with GitHub Pages gem
-- ✅ Fixed deprecated `pygments` → `highlighter: rouge`
-- ✅ Updated analytics and comments configurations
-- ✅ Added GitHub Actions workflow for automated builds
-- ✅ Improved markdown processing with kramdown + GFM
+## 🔧 Setup & Local Development
 
-### Local Development
+### Prerequisites
+
+- Ruby 3.3 or higher
+- Bundler gem
+
+### Installation
 
 1. **Install Ruby and Bundler** (if not already installed):
    ```bash
-   # On Windows, install Ruby via RubyInstaller
-   # Then install bundler
+   # On macOS/Linux
    gem install bundler
+   
+   # On Windows, install Ruby via RubyInstaller
+   # Then run: gem install bundler
    ```
 
-2. **Install dependencies**:
+2. **Clone the repository**:
+   ```bash
+   git clone https://github.com/hailangx/hailangx.github.com.git
+   cd hailangx.github.com
+   ```
+
+3. **Install dependencies**:
    ```bash
    bundle install
    ```
 
-3. **Run locally**:
+4. **Run locally**:
    ```bash
    bundle exec jekyll serve
    ```
    
    The site will be available at `http://localhost:4000`
 
-### Deployment
+## 🚀 Deployment
 
-The site automatically deploys via GitHub Actions when you push to the main branch. Make sure:
+The site automatically deploys via GitHub Actions when you push to the main/master branch. 
 
-1. Repository settings → Pages → Source is set to "GitHub Actions"
-2. The repository is public (or you have GitHub Pro/Team for private repo Pages)
+### GitHub Pages Configuration
 
-### Configuration Notes
-
-- **Analytics**: Update `_config.yml` with your Google Analytics 4 measurement ID
-- **Comments**: Uses Disqus - update with your Disqus shortname in `_config.yml`
-- **Social**: Update author information in `_config.yml`
-
-### Theme
-
-This site uses the Jekyll Bootstrap framework with the Mark Reid theme.
+1. Go to **Repository Settings → Pages**
+2. Set **Source** to "GitHub Actions"
+3. The workflow will automatically build and deploy the site
 
 ## 📝 Writing Posts
 
@@ -65,21 +65,48 @@ Example front matter:
 layout: post
 title: "Your Post Title"
 description: "Brief description"
-category: "category-name"
-tags: ["tag1", "tag2"]
+categories: [Category1, Category2]
+tags: [tag1, tag2]
 ---
 ```
 
-## 🚀 Features
+## ⚙️ Configuration
 
-- Responsive design
-- Syntax highlighting with Rouge
-- SEO optimization with jekyll-seo-tag
-- RSS feed generation
-- Sitemap generation
-- Archive and category pages
+Key settings in `_config.yml`:
+
+- **Site Info**: Update `title`, `tagline`, and `description`
+- **URL**: Set to `https://haiyangxu.github.io`
+- **Author**: Update social links and contact information
+- **Analytics**: Configure Google Analytics ID
+- **Comments**: Configure Disqus shortname
+
+## ✨ Features
+
+- 📱 Fully responsive design with dark/light mode
+- 🎯 Hierarchical categories and trending tags
+- 📊 Mathematical expressions and Mermaid diagrams support
+- 💬 Disqus comments integration
+- 📈 Google Analytics support
+- 🔍 SEO optimization
+- 📄 Automatic sitemap generation
+- 📰 RSS feed
+- 🔎 Syntax highlighting with Rouge
+- 📑 Table of contents in posts
+
+## 📁 Directory Structure
+
+```
+.
+├── _config.yml          # Site configuration
+├── _data/              # Data files (contact, share)
+├── _posts/             # Blog posts
+├── _tabs/              # Navigation tabs (About, Archives, Categories, Tags)
+├── assets/             # Images and other assets
+└── .github/workflows/  # GitHub Actions workflows
+```
 
 ---
 
 **Blog URL**: https://haiyangxu.github.io  
-**Last Updated**: June 2025 - Modernized for current GitHub Pages standards
+**Theme**: [Chirpy](https://github.com/cotes2020/jekyll-theme-chirpy)  
+**Last Updated**: October 2025 - Migrated to Chirpy theme
