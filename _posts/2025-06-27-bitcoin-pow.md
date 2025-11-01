@@ -3,7 +3,7 @@ layout: post
 title: "比特币的“无用之用”：烧电烧脑的计算，凭什么撑起数字黄金？"
 description: ""
 categories: ["BitCoin"]
-tags: []
+tags: [bitcoin, pow, 工作量证明]
 published: true
 ---
 

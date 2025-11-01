@@ -4,10 +4,10 @@ title: Graph Cut的一个有趣应用
 description: description
 categories: 
   - 算法
+  - 三维重建
 tags: 
   - Graph Cut
   - 图像拼接
-  - "Graph Cut,图像拼接"
 published: true
 ---
 

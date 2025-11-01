@@ -2,7 +2,7 @@
 layout: post
 title: "最长公共子序列和最长公共子串 "
 description: ""
-categories: ["算法",""]
+categories: ["算法"]
 tags: ["动态规划","最长公共子序列","最长公共子串"]
 published: true
 ---

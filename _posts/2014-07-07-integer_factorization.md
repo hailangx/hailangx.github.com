@@ -2,8 +2,8 @@
 layout: post
 title: "质数分解 "
 description: ""
-categories: ["算法",""]
-tags: ["质数","因式分解",""]
+categories: ["算法"]
+tags: ["质数","因式分解"]
 published: true
 ---
 
