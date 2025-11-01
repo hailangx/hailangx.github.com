@@ -3,8 +3,7 @@ layout: post
 title: "大悟凉粉小铺"
 description: ""
 category: "随笔"
-tags: []
-
+tags: [随笔, 回忆]
 ---
 
 大悟越来越陌生但还有过去的味道。

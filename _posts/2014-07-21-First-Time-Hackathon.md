@@ -2,7 +2,7 @@
 layout: post
 title: "First Time Hackathon !"
 description: ""
-categories: ["活动",""]
+categories: ["活动"]
 tags: ["Hackathon","大众点评2014校园极客挑战赛"]
 published: false
 ---
