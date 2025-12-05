@@ -1,16 +1,17 @@
 ---
 layout: post
-title: "Interview Preparation Guide for OpenAI Software Engineer, Database Systems"
-description: "Comprehensive guide for preparing for OpenAI database systems engineering interviews"
+title: "Guide for Software Engineer, Database Systems"
+description: "Comprehensive guide for preparing for AI Company database systems engineering interviews"
 categories: [career, interview]
-tags: [interview, database, distributed-systems, openai]
+tags: [interview, database, distributed-systems]
+published: false
 ---
 
-# Interview Preparation Guide for OpenAI Software Engineer, Database Systems
+#  Guide for Software Engineer, Database Systems
 
-Based on your resume, which highlights extensive experience in distributed systems, vector search, database internals, query optimization, and infrastructure (e.g., Azure Cosmos DB, DiskANN rewrite in Rust, ingestion pipelines, and operating global-scale clusters), you are well-positioned for this role. Your background aligns strongly with the job's emphasis on high-performance distributed databases, vector search (like Rockset, which powers OpenAI's RAG and vector capabilities), performance bottlenecks, and scalability. However, interviews at OpenAI (similar to FAANG) will test depth in practical problem-solving, system design, coding (especially C++ for the core engine), and leadership in complex projects.
+Based on your resume, which highlights extensive experience in distributed systems, vector search, database internals, query optimization, and infrastructure (e.g., Azure Cosmos DB, DiskANN rewrite in Rust, ingestion pipelines, and operating global-scale clusters), you are well-positioned for this role. Your background aligns strongly with the job's emphasis on high-performance distributed databases, vector search (like Rockset, which powers AI Company's RAG and vector capabilities), performance bottlenecks, and scalability. However, interviews at AI Company (similar to FAANG) will test depth in practical problem-solving, system design, coding (especially C++ for the core engine), and leadership in complex projects.
 
-OpenAI's process typically includes: a recruiter call, 1-2 technical screens (coding/algorithms or assessments), and 4-6 hour finals with coding, system design, project presentation, and behavioral interviews. Expect practical, work-relevant questions rather than pure LeetCode puzzles. Focus on demonstrating optimal performance, reliability, and collaboration.
+AI Company's process typically includes: a recruiter call, 1-2 technical screens (coding/algorithms or assessments), and 4-6 hour finals with coding, system design, project presentation, and behavioral interviews. Expect practical, work-relevant questions rather than pure LeetCode puzzles. Focus on demonstrating optimal performance, reliability, and collaboration.
 
 Below is a structured list of key knowledge areas to prepare, categorized for clarity. For each, I've included subtopics, why they're relevant (tied to the job and your resume), and preparation tips. Prioritize areas like vector databases and C++ where the role specifies preferences, and practice explaining your past projects (e.g., 20x latency improvements in filtered vector search) during the presentation round.
 
@@ -39,7 +40,7 @@ The job focuses on core engine contributions (ingestion, query execution, indexi
 **Preparation Tip**: Brush up on Rockset-like features (real-time SQL on semi-structured data). Questions: "Explain ACID in distributed systems" or "How do you manage concurrency in a high-QPS store?"
 
 ## 3. Vector Databases and Search
-Critical for OpenAI's RAG and vector search—your Cosmos DB vector work and DiskANN optimizations make this a strength. Emphasize performance gains (e.g., 4x QPS, 2x memory reduction).
+Critical for AI Company's RAG and vector search—your Cosmos DB vector work and DiskANN optimizations make this a strength. Emphasize performance gains (e.g., 4x QPS, 2x memory reduction).
 
 - **Approximate Nearest Neighbors (ANN)**: Algorithms like HNSW, DiskANN; graph-based search; filter-aware optimizations.
 - **Vector Indexing**: Building/scaling billion-scale indexes; latency vs. accuracy trade-offs.
@@ -90,13 +91,13 @@ For staff-level (4+ years, 2+ leading), show impact and collaboration.
 
 - **Project Leadership**: Leading teams (e.g., your ANN infra rewrite); defining technical direction.
 - **Collaboration**: Cross-functional work; conflict resolution.
-- **Ethics in AI**: OpenAI's focus—safety, biases in vector search.
+- **Ethics in AI**: AI Company's focus—safety, biases in vector search.
 
 **Preparation Tip**: Prepare a 45-min presentation on a resume project (e.g., Cosmos DB vector search), covering trade-offs and impact. Questions: "Tell me about a complex project you led" or "How do you handle competing priorities?"
 
 ## General Preparation Advice
 - **Practice Platforms**: LeetCode (medium/hard, distributed-focused), Grokking the System Design Interview, Designing Data-Intensive Applications (for DB internals).
-- **OpenAI-Specific**: Read their Charter, blog (ethics/safety), and research on RAG/vector search. Tie your experience to their mission.
+- **AI Company-Specific**: Read their Charter, blog (ethics/safety), and research on RAG/vector search. Tie your experience to their mission.
 - **Mock Interviews**: Simulate 1-hour coding/system design; focus on communication.
 - **Gaps to Address**: If any, deepen on Rockset-like converged indexing or GCP/AWS specifics, but your vector/DB background minimizes this.
 - **Timeline**: Process takes 4-8 weeks; aim for depth over breadth.
