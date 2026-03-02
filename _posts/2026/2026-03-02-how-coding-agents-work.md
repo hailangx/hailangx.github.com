@@ -326,6 +326,29 @@ A raw LLM with tool access can call one function and respond. But to solve real 
 **ReAct** (Reasoning + Acting), introduced by Yao et al. (2022), is the foundational pattern for coding agents. The model **interleaves reasoning traces with actions** in a loop:
 
 ```
+┌─────────────────────────────────────────────────────────────────┐
+│                        ReAct Loop                               │
+│                                                                 │
+│   ┌───────────┐      ┌───────────┐      ┌─────────────┐        │
+│   │  THOUGHT  │─────>│  ACTION   │─────>│ OBSERVATION  │        │
+│   │           │      │           │      │              │        │
+│   │ "I need   │      │ read_file │      │ [file        │        │
+│   │  to read  │      │ edit_file │      │  contents,   │        │
+│   │  the code │      │ run_cmd   │      │  cmd output, │        │
+│   │  first…"  │      │ search    │      │  errors…]    │        │
+│   └───────────┘      └───────────┘      └──────┬──────┘        │
+│        ▲                                        │               │
+│        │            ┌──────────┐                │               │
+│        └────────────│ NOT DONE │◄───────────────┘               │
+│                     └──────────┘                                │
+│                          │                                      │
+│                     ┌────▼─────┐                                │
+│                     │   DONE   │──────> Final Response           │
+│                     └──────────┘                                │
+└─────────────────────────────────────────────────────────────────┘
+```
+
+```
 Thought 1: I need to understand the current code before making changes.
             Let me read the main file.
 Action 1:  read_file("src/main.py")
@@ -342,6 +365,8 @@ Observation 3: 15 passed, 0 failed.
 
 Thought 4: All tests pass. The fix is correct.
 Action 4:  [Final response to user]
+
+
 ```
 
 ### Why ReAct Works for Coding
