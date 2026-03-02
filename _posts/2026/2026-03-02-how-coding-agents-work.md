@@ -21,25 +21,19 @@ Coding agents represent one of the most impactful applications of large language
 This report traces the full evolution from **raw LLMs** doing next-token prediction, through the key enablers — **prompt engineering**, **chain-of-thought reasoning**, **tool use**, and **agentic loops** — up to the **multi-agent orchestration systems** used in production today. Each layer builds on the previous one, forming a six-layer stack:
 
 ```
-┌───────────────────────────────────────────────────────────────┐
-│  Layer 6  │  MULTI-AGENT ORCHESTRATION                       │
-│           │  Coordinator + specialized workers, parallelism   │
-├───────────┼──────────────────────────────────────────────────-┤
-│  Layer 5  │  AGENTIC LOOP (ReAct)                            │
-│           │  while(not_done): think → act → observe → repeat │
-├───────────┼──────────────────────────────────────────────────-┤
-│  Layer 4  │  TOOL USE / FUNCTION CALLING                     │
-│           │  File I/O, terminal, search, browser, APIs       │
-├───────────┼──────────────────────────────────────────────────-┤
-│  Layer 3  │  SCAFFOLDING                                     │
-│           │  Memory, context management, planning, safety    │
-├───────────┼──────────────────────────────────────────────────-┤
-│  Layer 2  │  PROMPT ENGINEERING                              │
-│           │  System prompts, few-shot, CoT instructions      │
-├───────────┼──────────────────────────────────────────────────-┤
-│  Layer 1  │  RAW LLM                                         │
-│           │  Next-token prediction on code corpora           │
-└───────────────────────────────────────────────────────────────┘
+┌─────────┬────────────────────────────┬──────────────────────────────────────────────┐
+│ Layer 6 │ MULTI-AGENT ORCHESTRATION  │ Coordinator + specialized workers, parallel  │
+├─────────┼────────────────────────────┼──────────────────────────────────────────────┤
+│ Layer 5 │ AGENTIC LOOP (ReAct)      │ while(not_done): think → act → observe       │
+├─────────┼────────────────────────────┼──────────────────────────────────────────────┤
+│ Layer 4 │ TOOL USE / FUNCTION CALL  │ File I/O, terminal, search, browser, APIs    │
+├─────────┼────────────────────────────┼──────────────────────────────────────────────┤
+│ Layer 3 │ SCAFFOLDING               │ Memory, context management, planning, safety │
+├─────────┼────────────────────────────┼──────────────────────────────────────────────┤
+│ Layer 2 │ PROMPT ENGINEERING        │ System prompts, few-shot, CoT instructions   │
+├─────────┼────────────────────────────┼──────────────────────────────────────────────┤
+│ Layer 1 │ RAW LLM                   │ Next-token prediction on code corpora        │
+└─────────┴────────────────────────────┴──────────────────────────────────────────────┘
 ```
 
 ---
@@ -69,8 +63,17 @@ At their core, all code-generating LLMs work by **next-token prediction**. Given
 The generation pipeline works as follows:
 
 ```
-Source Code → Tokenizer → Embeddings → Transformer (N layers of self-attention)
-    → Prediction Head (linear + softmax) → Next Token → append → repeat
+┌─────────────┐   ┌───────────┐   ┌────────────┐   ┌──────────────────────────────┐
+│ Source Code  │──>│ Tokenizer │──>│ Embeddings │──>│ Transformer (N layers of     │
+└─────────────┘   └───────────┘   └────────────┘   │ self-attention)              │
+                                                    └──────────────┬───────────────┘
+                                                                   │
+                                                                   ▼
+┌──────────┐   ┌────────────────┐   ┌──────────────────────────────────────────────┐
+│  repeat  │<──│ append to seq  │<──│ Prediction Head (linear + softmax)           │
+└────┬─────┘   └────────────────┘   │ → Next Token (greedy / top-p / temperature)  │
+     │                              └──────────────────────────────────────────────┘
+     └──────────────────────────────────────────────────────────────────────────>↑
 ```
 
 1. **Tokenization**: Source code is broken into tokens — keywords, identifiers, operators, whitespace, and special characters. Subword tokenizers (BPE) handle rare identifiers by splitting them into known fragments.
