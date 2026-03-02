@@ -11,6 +11,8 @@ lang: en
 # Change to your timezone › https://zones.arilyn.cc
 timezone: America/Los_Angeles
 
+future: true
+
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
