@@ -9,24 +9,24 @@ theme: jekyll-theme-chirpy
 lang: en
 
 # Change to your timezone › https://zones.arilyn.cc
-timezone: Asia/Shanghai
+timezone: America/Los_Angeles
 
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: Haiyang Xu
+title: Haiyang
 
 tagline: Grow step by step!
 
 description: >-
-  A Computer Vision Blog by Haiyang Xu
+  Random Blog by Haiyang
 
 # Fill in the protocol & hostname for your site.
 # E.g. 'https://username.github.io', note that it does not end with a '/'.
 url: "https://hailangx.github.io"
 
 github:
-  username: HaiyangXu
+  username:
 
 twitter:
   username: username
@@ -34,12 +34,12 @@ twitter:
 social:
   # Change to your full name.
   # It will be displayed as the default author of the posts and the copyright owner in the Footer
-  name: Haiyang Xu
-  email: HaiyangXu@hust.edu.cn
+  name: Haiyang
+  email: hailangxsea@gmail.com
   links:
     # The first element serves as the copyright owner's link
     - https://twitter.com/username
-    - https://github.com/HaiyangXu
+    - https://github.com/
 
 # Site Verification Settings
 webmaster_verifications:
